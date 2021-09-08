@@ -71,4 +71,6 @@ def wrangle_prep_zillow(df):
     # changes df type to from 'float64' to 'int'
     df = df.astype('int')
     
+    df = df.rename(columns={"bedroomcnt": "bedrooms", "bathroomcnt": "bathrooms", "calculatedfinishedsquarefeet": "square_feet", "taxamount": "taxes", "taxvaluedollarcnt": "tax_value"})
+    
     return df
